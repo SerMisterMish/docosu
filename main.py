@@ -28,12 +28,7 @@ if __name__ == "__main__":
             hour = 6
     elif postponed['count'] == 0:
         hour = int(today.strftime("%H"))
-        if hour % 3 == 0:
-            hour = int(today.strftime("%H")) + 3
-        elif hour % 3 == 1:
-            hour = int(today.strftime("%H")) + 2
-        else:
-            hour = int(today.strftime("%H")) + 1
+        hour += 3 - (hour % 3) 
     else:
         hour = int(today.strftime("%H"))
 
