@@ -8,7 +8,6 @@ from datetime import datetime
 
 if __name__ == "__main__":
 
-    today = datetime.now()
     group_id = int(input('group id: '))
     token = input('token: ')
     vk_session = vk_api.VkApi(token=token)
@@ -17,6 +16,7 @@ if __name__ == "__main__":
     images = sorted(os.listdir("./img"))
     shuffle(images)
 
+    today = datetime.now()
     postponed = vk.wall.get(owner_id=-group_id, filter="postponed", count=101)
     if postponed['count'] > 100:
         postponed = vk.wall.get(owner_id=-group_id, offset=postponed['count'] - 1, filter="postponed", count=1)
