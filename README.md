@@ -1,3 +1,10 @@
+# Usage
+1.    Create a `config.json` file in the same directory as the `main.py` file.
+It should have the same format as in the [example below](#configjson-example).
+2.   Place your images inside the folder you provided as `"img_dir"`.
+3.   Run main.py.
+
+
 # config.json example
 ```json
 {
